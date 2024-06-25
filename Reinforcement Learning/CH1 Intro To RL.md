@@ -46,6 +46,7 @@ A Scalar signal specifies the goal $R_t$
 
 * Goal: $G_t = R_{t+1} + R_{t+2} + R_{t+3} + \ldots$
 * Value: The expected cumulative reward from a state s
+  
 $$
 \begin{align}
 v(s) &= \mathbb{E} \left[ G_t \mid S_t = s \right] \\
@@ -60,8 +61,7 @@ Note: $\mathbb{E}\left[ X \right]$ means "expected value of X"
 ## Inside The Agent:
 * Agent State:
   * Observability: environment state != avent state
-  * History: sequence of observation, action and reward <br> $\mathcal{H}_t = O_0, A_0, R_1, O_1, \ldots, O_{t-1}, A_{t-1}, R_t, O_t$
-
+  * History: sequence of observation, action and reward. $\mathcal{H_t} = O_0, A_0, R_1, O_1, \ldots, O_{t-1}, A_{t-1}, R_t, O_t$
   * The history is used to construc the agent state $S_t$ (Markov assumption)
   * Update function $u$ : Agent state is a function of the history $S_{t+1} = u(S_t, A_t, R_{t+1}, O_{t+1})$
 * Policy:
